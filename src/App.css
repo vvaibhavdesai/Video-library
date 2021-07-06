@@ -1,0 +1,34 @@
+.App {
+  text-align: center;
+  color: #fff;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  background: black;
+backdrop-filter: blur( 0.0px );
+-webkit-backdrop-filter: blur( 0.0px );
+
+}
+
+* {
+  box-sizing:border-box;
+  outline-width: 0px;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 1px solid #fca311;
+  -webkit-text-fill-color: #fca311;
+  -webkit-box-shadow: 0 0 0px 1000px #000 inset;
+  transition: background-color 5000s ease-in-out 0s;
+}

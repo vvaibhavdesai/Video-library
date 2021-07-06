@@ -1,0 +1,68 @@
+.banner_posters {
+  position: relative;
+  width: 100%;
+  background-size: cover;
+  height: auto;
+  object-fit: contain;
+
+  /* background-position: center center; */
+}
+
+.banner_poster {
+  position: relative;
+  width: 100%;
+  min-height: auto;
+  max-height: 30rem;
+  z-index: 0;
+  object-fit:cover;
+}
+
+.banner_btn {
+  padding: 1rem;
+  position: absolute;
+  z-index: 1;
+  background: transparent;
+}
+
+.banner_plus {
+  top: 45%;
+  left: 2%;
+}
+
+.banner_minus {
+  top: 45%;
+  right: 2%;
+}
+
+.banner_poster.animation {
+  animation: zoom 0.9s 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.banner_btn i {
+  font-weight: bold;
+  color: #ffa718;
+  font-size: 1.5rem;
+}
+
+.banner_btn i:active {
+  box-shadow: 0 0 20px #ebbb6e;
+  transform: scale(0.8);
+}
+
+.banner_btn:disabled {
+  cursor: not-allowed;
+  color: #ceba9abb;
+}
