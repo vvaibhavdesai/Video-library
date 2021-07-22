@@ -13,6 +13,7 @@ export default function VideoPage() {
   const { videoId } = useParams();
   const [showModal, setShowModal] = useState(false);
   const { videoData } = useVideoData();
+  console.log(videoId,"yeh hai videpage baba")
 
   let video = {}
   if(videoData.length > 0){
@@ -28,16 +29,6 @@ export default function VideoPage() {
     setCreatePlaylist,
   } = usePlaylistAction();
 
-  // const notify = () =>
-  //   toast("Wow so easy!", {
-  //     position: "bottom-left",
-  //     autoClose: 5000,
-  //     hideProgressBar: false,
-  //     closeOnClick: true,
-  //     pauseOnHover: true,
-  //     draggable: true,
-  //     progress: undefined,
-  //   });
 
   const Modal = ({ setShowModal, checkHandler, keyDownHandler, video }) => {
     const { createPlaylist, setCreatePlaylist } = usePlaylistAction();
@@ -98,7 +89,7 @@ export default function VideoPage() {
     <div className="VideoPage-Contentbox ">
       <div class="VideoPage-iframe">
         <iframe
-          src={`https://www.youtube.com/embed/${video._id}`}
+          src={`https://www.youtube.com/embed/${video?._id}`}
           title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

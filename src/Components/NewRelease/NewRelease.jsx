@@ -1,9 +1,10 @@
 import "./NewRelease.css";
+import { useVideoData } from './../../Context/DataContext';
 
-import { videoData } from "./../VideoData/VideoData";
 
 export default function NewRelease() {
   // const data = videoData.slice(0, 5);
+  const { videoData } = useVideoData()
 
   // console.log(data.thumbnailsome.replace(/[""]+/g));
   return (

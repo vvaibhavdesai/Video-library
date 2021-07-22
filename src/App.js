@@ -75,7 +75,7 @@ function App() {
 
   useEffect(()=>{
 
-    if(isUserLogin && like.length > 0 && createPlaylist.length > 0 && watchList.length > 0){
+    if(isUserLogin && (like.length > 0 || createPlaylist.length > 0 || watchList.length > 0)){
       (async function(){
         try{
           const { data } = await axios.post(`https://mongodbinventorysetup.vaibhavdesai888.repl.co/user/${userData._id}`,

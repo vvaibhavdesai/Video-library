@@ -1,5 +1,5 @@
 import { useLocation, useNavigate } from "react-router-dom";
-import { videoData } from "./../VideoData/VideoData";
+import { useVideoData } from './../../Context/DataContext';
 import "./SearchPage.css";
 
 const getSearchResults = (videoData, search) => {
@@ -14,7 +14,8 @@ const getSearchResults = (videoData, search) => {
 export function SearchPage() {
   const search = new URLSearchParams(useLocation().search).get("search");
   const navigate = useNavigate();
-
+  const { videoData } = useVideoData()
+  console.log("yeh hai search",search)
   return (
     <div className="search-container">
       <div class="video-404">
@@ -22,13 +23,14 @@ export function SearchPage() {
         <button onClick={() => navigate(`/`)}>back to home</button>
       </div>
       <div className="video-flex">
-        {getSearchResults(videoData, search).map((video) => (
-          <img
+        {getSearchResults(videoData, search).map((video) => {
+          console.log("yeh hai video id",video)
+         return <img
             alt=""
             onClick={() => navigate(`/videopage/${video._id}`)}
             src={video.thumbnail}
           ></img>
-        ))}
+        })}
         {getSearchResults(videoData, search).length === 0 && (
           <div>No matching videos with that name found</div>
         )}
