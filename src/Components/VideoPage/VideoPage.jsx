@@ -2,7 +2,7 @@ import "./VideoPage.css";
 import { useParams } from "react-router-dom";
 import { useVideoData } from './../../Context/DataContext';
 import { usePlaylistAction } from "../../Context/PlaylistContext";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { keyDownHandler } from "./keyDownHandler";
 import { checkHandler } from "./checkHandler";
 import { likeHandler, watchListHandler } from "./likeHandler";
@@ -14,6 +14,10 @@ export default function VideoPage() {
   const [showModal, setShowModal] = useState(false);
   const { videoData } = useVideoData();
   console.log(videoId,"yeh hai videpage baba")
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   let video = {}
   if(videoData.length > 0){
