@@ -22,6 +22,15 @@ footer h4{
    
 }
 
+a:visited,:link{
+    color:#e5e5e5;
+}
+
+.fa-icons:hover{
+    transform:rotate(320deg);
+}
+
+
 p{
     font-size: 12px;
     font-weight:bold;

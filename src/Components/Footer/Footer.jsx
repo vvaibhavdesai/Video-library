@@ -7,15 +7,10 @@ export default function Footer() {
       <footer>
         <h4>Connect with me here</h4>
         <div className="footer-social-media">
-          <FaInstagram />
-          <FaLinkedin />
-          <FaTwitter />
+          <a href="https://www.instagram.com/vvaibhav_desai/"><i><FaInstagram  className="fa-icons" /></i></a>
+          <a href="https://www.linkedin.com/in/vvaibhavdesai/"><i><FaLinkedin className="fa-icons" /></i></a>
+          <a href="https://twitter.com/vvaibhav_desai"><i ><FaTwitter className="fa-icons"/></i></a>
         </div>
-        <p>
-          I don't own any videos copyright owns to the respective content
-          creators.
-        </p>
-        <p>Just used it for educational purpose</p>
       </footer>
     </div>
   );

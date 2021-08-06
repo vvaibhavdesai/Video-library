@@ -1,6 +1,6 @@
 import { useContext, createContext, useState } from "react";
 import axios from "axios";
-
+import { toast } from "react-toastify"
 export const AuthContext = createContext();
 
 export function AuthContextProvider({ children }) {
@@ -18,7 +18,16 @@ export function AuthContextProvider({ children }) {
       );
     }
   };
-
+const notify = (message)=>toast.dark(message, {
+  position: "bottom-right",
+  autoClose: 5000,
+  hideProgressBar: false,
+  closeOnClick: true,
+  pauseOnHover: true,
+  draggable: true,
+  progress: undefined,
+  });
+  
   const loginUser = async (email, password) => {
     try {
       const { data } = await axios.post(
@@ -33,7 +42,9 @@ export function AuthContextProvider({ children }) {
       setUserData(data.user)
       setLocalStorage(data)
       setUserLogin((prev)=>!prev)
+      notify('Welcome Back!')
     } catch (error) {
+      notify('Please check Email/Password')
       console.log(error.message);
     }
   };
@@ -53,8 +64,9 @@ export function AuthContextProvider({ children }) {
       setLocalStorage(data)
       setUserData(data.user)
       setUserLogin((prev)=>!prev)
-      console.log(data.user);
+      notify('Welcome Back!')
     } catch (error) {
+      notify('Something went wrong,Please try after some time')
       console.log(error.message);
     }
   };

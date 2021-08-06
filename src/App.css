@@ -1,3 +1,5 @@
+@import url("react-toastify/dist/ReactToastify.css");
+
 .App {
   text-align: center;
   color: #fff;
@@ -9,7 +11,9 @@ backdrop-filter: blur( 0.0px );
 -webkit-backdrop-filter: blur( 0.0px );
 
 }
-
+.toast-adjuster{
+  top:110px;
+}
 * {
   box-sizing:border-box;
   outline-width: 0px;

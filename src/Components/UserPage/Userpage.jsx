@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { useState } from "react";
 import { useAuth } from "../../Context/AuthContext";
-
+import { ToastContainer } from "react-toastify";
 const FormContainer = styled.div`
   min-height: 100vh;
   max-height: 100%;
@@ -97,6 +97,7 @@ export function UserPage() {
   const [password, setPassword] = useState("")
   const { signUpUser, loginUser } = useAuth();
   return (
+    <div>
     <FormContainer>
       <Form onSubmit={(e) => e.preventDefault()}>
         <FormHeader>{signup ? "SignUp" : "Login"}</FormHeader>
@@ -117,11 +118,16 @@ export function UserPage() {
           onClick={() => (signup ? signUpUser(userName,email,password) : loginUser(email,password))}
         ></SubmitBtn>
         <div>
-          <button onClick={() => setSignUp((prev) => !prev)}>
+          <button style={{backgroundColor:"rgb(166 104 3)",color:"#ccc",cursor:"pointer",padding:"0.5rem 0.7rem",margin:"0.5rem 0",borderRadius:"20px"}}onClick={() => setSignUp((prev) => !prev)}>
             {signup ? `login` : `signup`}
           </button>
+          {!signup ? <>
+            <p style={{color:"white"}}><span>TestEmail:</span><span> vaibhavdesai888@gmail.com</span></p>
+            <p style={{color:"white"}}><span>Password:</span><span> vaibhav</span></p>
+          </>:""}
         </div>
       </Form>
     </FormContainer>
+    </div>
   );
 }
