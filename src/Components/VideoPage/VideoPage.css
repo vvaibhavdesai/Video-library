@@ -1,0 +1,239 @@
+.VideoPage-Contentbox {
+  background: black;
+  padding: 1rem;
+}
+
+.VideoPage-iframe {
+  padding: 1rem 1rem 0 1rem;
+  height: 600px;
+  object-fit: cover;
+}
+iframe {
+  height: 100%;
+  width: 100%;
+}
+.VideoPage-content {
+  background:#2c2c2f;
+  box-shadow: 0 5px 10px 0 #333337;
+  backdrop-filter: blur( 0px );
+  -webkit-backdrop-filter: blur(0px);
+  border-radius: 0 0 10px 10px;
+  height: 100%;
+  padding: 2rem;
+  margin: 0 1rem 1rem 1rem;
+}
+.VideoPage-details h3 {
+  text-align: left;
+  font-size: 2rem;
+  margin: 1rem;
+}
+.VideoPage-description {
+  margin: 1rem;
+  font-size: 1rem;
+  text-align: left;
+  word-wrap:break-word;
+}
+
+.VideoPage-Suggestion h4 {
+  text-align: left;
+  font-size: 1.5rem;
+  margin: 1rem;
+}
+.video-btn-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap:wrap;
+}
+
+.block-btn{
+  flex:1;
+  margin:0.4rem ;
+  max-width: 200px;
+  
+}
+.btn_group{
+  display: flex;
+  justify-content:flex-end;
+  flex:3;
+}
+
+
+.btn {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+}
+
+.WatchLater_btn {
+  border: 3px solid #fca311;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  background: transparent;
+  color: #e5e5e5;
+  font-weight: bold;
+  font-size: 1.2rem;
+  width:100%
+}
+.WatchLater_btn:active {
+  background: #e5e5e5;
+  color: #fca311;
+}
+.WatchLater {
+  margin-right: 0.5rem;
+  color: #fca311;
+  font-size: 1.2rem;
+}
+
+.Share_btn {
+  border: 3px solid #fca311;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  background: transparent;
+  color: #e5e5e5;
+  font-weight: bold;
+  font-size: 1.2rem;
+  width:100%
+}
+.Share_btn:active {
+  background: #e5e5e5;
+  color: #fca311;
+}
+.Share {
+  margin-right: 0.5rem;
+  color: #fca311;
+  font-size: 1.2rem;
+}
+.Like-btn {
+  background-color: transparent;
+  margin-right: 0.5rem;
+}
+
+.like {
+  color: #fca311;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+}
+
+.newplaylist {
+  margin-right: 0.5rem;
+  color: #fca311;
+}
+
+.newplaylist_btn {
+  border: 3px solid #fca311;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  background: transparent;
+  color: #e5e5e5;
+  font-weight: bold;
+  font-size: 1.2rem;
+
+  width:100%
+}
+.newplaylist_btn:active {
+  background: #e5e5e5;
+  color: #fca311;
+}
+
+.modal-btn{
+  border: 1px solid #fca311;
+  border-radius: 20px;
+  margin:0.7rem 0 0 0;
+  padding: 0.5rem 1rem;
+  background: transparent;
+  color: #e5e5e5;
+  font-weight: bold;
+  font-size: 1rem;
+  color:#fca311;
+
+}
+
+.VideoPage-modal {
+  position: absolute;
+  left: 50%;
+  top: 35%;
+  transform: translate(-50%, -50%);
+  border-radius: 0 10px 10px 10px;
+  padding: 1rem;
+  width: 15rem;
+  background: #131316;
+}
+.playlistmodal-listing {
+  overflow-y: scroll;
+  max-height: 10rem;
+  scrollbar-width: thin;
+  scrollbar-color: #2c2c2f;
+}
+.playlistmodal-listing::-webkit-scrollbar-thumb {
+  width: 10px;
+  background-color: #565659;
+  border-radius: 20px;
+  
+}
+
+.PlaylistNames {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  padding: 0.7rem;
+  margin-bottom: 0.7rem;
+  margin-right: 1rem;
+  background: #565659;
+  list-style: none;
+  text-align: left;
+}
+.PlaylistNames-checkBx {
+  height: 1rem;
+  width: 1rem;
+  margin-right: 1rem;
+}
+
+
+
+.VideoPage-details {
+  position: relative;
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: rgb(207, 199, 199);
+  border-radius:10px
+}
+
+.playlist-input{
+  background:#565659;
+  width:13rem;
+  height:2rem;
+  margin-right:1.5rem;
+  border-radius:10px;
+  padding:0.4rem;
+  color:#e5e5e5
+}
+.playlist-input::placeholder{
+  color:#aa9e9e
+}
+
+
+@media only screen and (max-width: 900px){
+  .video-btn-div{
+    flex-direction:column;
+  }
+  .btn_group{
+    flex-direction:column;
+    width:100%;
+    flex:1
+  }
+  .btn_group .block-btn{
+    min-width:100%;
+  }
+}
+

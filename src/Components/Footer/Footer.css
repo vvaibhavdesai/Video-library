@@ -1,0 +1,39 @@
+.Footer-content{
+    height:auto;
+    width: 100%;
+    background: #151518;
+    margin-top:1rem;
+
+}
+footer{
+    width:100%;
+}
+footer h4{
+    font-size: 1.5rem;
+    padding:1rem;
+}
+.footer-social-media{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 2rem;
+    color:#e5e5e5;
+    padding:1rem;
+   
+}
+
+a:visited,:link{
+    color:#e5e5e5;
+}
+
+.fa-icons:hover{
+    transform:rotate(320deg);
+}
+
+
+p{
+    font-size: 12px;
+    font-weight:bold;
+    padding-bottom: 0.5rem;
+
+}

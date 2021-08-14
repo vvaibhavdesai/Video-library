@@ -1,0 +1,28 @@
+.beginner_posters {
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  padding: 1rem;
+}
+
+.beginner_posters::-webkit-scrollbar {
+  display: none;
+}
+
+.beginner_poster {
+  object-fit: contain;
+  width: 100%;
+  max-height: 200px;
+  transition: transform 450ms;
+  margin-right: 0.7rem;
+}
+
+.beginner_poster:hover {
+  transform: scale(1.08);
+}
+
+.beginner_heading {
+  text-align: left;
+  margin-left: 1rem;
+  color: #e5e5e5;
+}

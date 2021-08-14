@@ -1,0 +1,15 @@
+h3{
+    text-align: left;
+}
+
+.videoCard img{
+    min-width:300px ;
+    max-width:340px;
+    height:200px;
+    margin:1rem;
+
+}
+
+.videoCard{
+    display:flex;
+}

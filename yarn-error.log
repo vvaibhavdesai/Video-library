@@ -1,0 +1,64 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\Vaibhav Desai\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add react-pretty-carousel
+
+PATH: 
+  C:\Users\Vaibhav Desai\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\Vaibhav Desai\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files\Git\cmd;C:\Program Files\nodejs;C:\Users\Vaibhav Desai\AppData\Local\Microsoft\WindowsApps;C:\Users\Vaibhav Desai\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Vaibhav Desai\AppData\Local\GitHubDesktop\bin;C:\Users\Vaibhav Desai\AppData\Roaming\npm;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
+
+Yarn version: 
+  1.22.10
+
+Node version: 
+  14.16.1
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: EPERM: operation not permitted, open 'C:\Users\Vaibhav Desai\fittube\node_modules\postcss-browser-comments\node_modules\.bin\browserslist.cmd'
+
+npm manifest: 
+  {
+    "name": "fittube",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+      "@testing-library/jest-dom": "^5.12.0",
+      "@testing-library/react": "^11.2.6",
+      "@testing-library/user-event": "^12.8.3",
+      "react": "^17.0.2",
+      "react-dom": "^17.0.2",
+      "react-icons": "^4.2.0",
+      "react-scripts": "4.0.3",
+      "web-vitals": "^1.1.1"
+    },
+    "scripts": {
+      "start": "react-scripts start",
+      "build": "react-scripts build",
+      "test": "react-scripts test",
+      "eject": "react-scripts eject"
+    },
+    "eslintConfig": {
+      "extends": [
+        "react-app",
+        "react-app/jest"
+      ]
+    },
+    "browserslist": {
+      "production": [
+        ">0.2%",
+        "not dead",
+        "not op_mini all"
+      ],
+      "development": [
+        "last 1 chrome version",
+        "last 1 firefox version",
+        "last 1 safari version"
+      ]
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
