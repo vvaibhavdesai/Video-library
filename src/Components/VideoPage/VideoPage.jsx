@@ -146,10 +146,6 @@ export default function VideoPage() {
                   ? "Added"
                   : "WatchList"}
               </button>
-              <button class=" Share_btn block-btn">
-                <i class="fas fa-share Share"></i>
-                Share
-              </button>
             </div>
           </div>
           <p class="VideoPage-description">

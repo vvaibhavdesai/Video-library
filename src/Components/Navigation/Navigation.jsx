@@ -17,6 +17,7 @@ export default function Navigation() {
         <div className="nav-group">
           <div id="menuToggle">
             <input
+            value={openBurger}
               onChange={() => setBurger((prev) => !prev)}
               type="checkbox"
             ></input>
@@ -24,7 +25,7 @@ export default function Navigation() {
             <span></span>
             <span></span>
           </div>
-          <Menu openBurger={openBurger} />
+          <Menu setBurger={setBurger} openBurger={openBurger} />
           <div className="nav-search-icon">
             <SearchBar />
           </div>
