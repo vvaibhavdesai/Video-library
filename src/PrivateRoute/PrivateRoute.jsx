@@ -3,7 +3,7 @@ import { useAuth } from "../Context/AuthContext";
 
 export function PrivateRoute({ path, ...props }) {
     const { token } = useAuth()
-    console.log(token,"yeh meh hu path")
+    // console.log(token,"yeh meh hu path")
     return token ? (
     <Route {...props} path={path} />
   ) : (

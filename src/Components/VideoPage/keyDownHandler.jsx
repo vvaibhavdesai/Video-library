@@ -29,6 +29,5 @@ export const keyDownHandler = (
     setShowModal((prev) => !prev);
 
     notify();
-    console.log("inside the function ", createPlaylist);
   }
 };

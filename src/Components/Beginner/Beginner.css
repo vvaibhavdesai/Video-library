@@ -7,8 +7,14 @@
 
 .beginner_posters::-webkit-scrollbar {
   display: none;
+  /* width: 5px;
+  height: 8px; */
 }
+.beginner_posters::-webkit-scrollbar-thumb{
+  /* background-color:gray;
+  border-radius:50px; */
 
+}
 .beginner_poster {
   object-fit: contain;
   width: 100%;

@@ -9,8 +9,6 @@ export default function Navigation() {
   const [openBurger, setBurger] = useState(false);
   const { isUserLogin,logout } = useAuth()
 
-  console.log("open close", openBurger);
-
   return (
     <nav>
       <div className="nav-content">

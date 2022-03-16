@@ -13,11 +13,9 @@ export function FetchDataProvider({ children }) {
           const { data }= await axios.get(
             "https://mongoDBInventorySetup.vaibhavdesai888.repl.co/videos"
           );
-          console.log(data.videos,"this is videodata");
           setVideoData(data.videos)
         }
       } catch (error) {
-        console.log(error.message);
       }
     })();
   },[]);

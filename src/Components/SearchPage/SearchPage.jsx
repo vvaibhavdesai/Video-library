@@ -15,7 +15,6 @@ export function SearchPage() {
   const search = new URLSearchParams(useLocation().search).get("search");
   const navigate = useNavigate();
   const { videoData } = useVideoData()
-  console.log("yeh hai search",search)
   return (
     <div className="search-container">
       <div class="video-404">
@@ -24,7 +23,6 @@ export function SearchPage() {
       </div>
       <div className="video-flex">
         {getSearchResults(videoData, search).map((video) => {
-          console.log("yeh hai video id",video)
          return <img
             alt=""
             onClick={() => navigate(`/videopage/${video._id}`)}

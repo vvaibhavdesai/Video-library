@@ -11,7 +11,6 @@ export function AuthContextProvider({ children }) {
   const setLocalStorage = ({ token }) => {
     if (localStorage) {
       setToken(token)
-      console.log(token)
       return localStorage.setItem(
         "login",
         JSON.stringify({ userLoggedin: true, token })
@@ -45,7 +44,6 @@ const notify = (message)=>toast.dark(message, {
       notify('Welcome Back!')
     } catch (error) {
       notify('Please check Email/Password')
-      console.log(error.message);
     }
   };
 
@@ -67,7 +65,6 @@ const notify = (message)=>toast.dark(message, {
       notify('Welcome Back!')
     } catch (error) {
       notify('Something went wrong,Please try after some time')
-      console.log(error.message);
     }
   };
   const logout = async()=>{

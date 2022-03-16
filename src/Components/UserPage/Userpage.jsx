@@ -94,40 +94,88 @@ export function UserPage() {
   const [signup, setSignUp] = useState(false);
   const [userName, setUserName] = useState("");
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("")
+  const [password, setPassword] = useState("");
   const { signUpUser, loginUser } = useAuth();
   return (
     <div>
-    <FormContainer>
-      <Form onSubmit={(e) => e.preventDefault()}>
-        <FormHeader>{signup ? "SignUp" : "Login"}</FormHeader>
-        {signup && (
+      <FormContainer>
+        <Form onSubmit={(e) => e.preventDefault()}>
+          <FormHeader>{signup ? "SignUp" : "Login"}</FormHeader>
+          {signup && (
+            <div>
+              <FormInput
+                onChange={(e) => setUserName(e.target.value)}
+                placeholder="username"
+              ></FormInput>
+            </div>
+          )}
           <div>
-            <FormInput onChange={(e)=>setUserName(e.target.value)} placeholder="username"></FormInput>
+            <FormInput
+              onChange={(e) => setEmail(e.target.value)}
+              type="email"
+              placeholder="email"
+            ></FormInput>
           </div>
-        )}
-        <div>
-          <FormInput onChange={(e)=>setEmail(e.target.value)} type="email" placeholder="email"></FormInput>
-        </div>
-        <div>
-          <FormInput onChange={(e)=>setPassword(e.target.value)}  type="password" placeholder="password"></FormInput>
-        </div>
-        <SubmitBtn
-          type="submit"
-          placeholder="Submit"
-          onClick={() => (signup ? signUpUser(userName,email,password) : loginUser(email,password))}
-        ></SubmitBtn>
-        <div>
-          <button style={{backgroundColor:"rgb(166 104 3)",color:"#ccc",cursor:"pointer",padding:"0.5rem 0.7rem",margin:"0.5rem 0",borderRadius:"20px"}}onClick={() => setSignUp((prev) => !prev)}>
-            {signup ? `login` : `signup`}
-          </button>
-          {!signup ? <>
-            <p style={{color:"white"}}><span>TestEmail:</span><span> vaibhavdesai888@gmail.com</span></p>
-            <p style={{color:"white"}}><span>Password:</span><span> vaibhav</span></p>
-          </>:""}
-        </div>
-      </Form>
-    </FormContainer>
+          <div>
+            <FormInput
+              onChange={(e) => setPassword(e.target.value)}
+              type="password"
+              placeholder="password"
+            ></FormInput>
+          </div>
+          <SubmitBtn
+            type="submit"
+            placeholder="Submit"
+            onClick={() =>
+              signup
+                ? signUpUser(userName, email, password)
+                : loginUser(email, password)
+            }
+          ></SubmitBtn>
+          <div>
+            <button
+              style={{
+                backgroundColor: "rgb(166 104 3)",
+                color: "#ccc",
+                cursor: "pointer",
+                padding: "0.5rem 0.7rem",
+                margin: "0.5rem 0",
+                borderRadius: "20px",
+              }}
+              onClick={() => setSignUp((prev) => !prev)}
+            >
+              {signup ? `login` : `signup`}
+            </button>
+            <button
+              style={{
+                backgroundColor: "rgb(166 104 3)",
+                color: "#ccc",
+                cursor: "pointer",
+                padding: "0.5rem 0.7rem",
+                margin: "0.5rem 0",
+                borderRadius: "20px",
+              }}
+              onClick={() => loginUser("vaibhavdesai888@gmail.com", "vaibhav")}
+            >
+              Guest Login
+            </button>
+            {/* {!signup ? (
+              <>
+                <p style={{ color: "white" }}>
+                  <span>TestEmail:</span>
+                  <span> vaibhavdesai888@gmail.com</span>
+                </p>
+                <p style={{ color: "white" }}>
+                  <span>Password:</span>
+                  <span> vaibhav</span>
+                </p>
+              </>
+            ) : (
+              ""
+            )} */}
+          </div>
+        </Form>
+      </FormContainer>
     </div>
   );
 }

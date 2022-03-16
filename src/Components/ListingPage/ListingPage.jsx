@@ -13,7 +13,7 @@ export default function ListingPage() {
   const { videoData } = useVideoData();
   const navigate =  useNavigate()
 
-  console.log(isUserLogin,"this is user login")
+  // console.log(isUserLogin,"this is user login")
   useEffect(()=>{
     if(!isUserLogin){
       return navigate('/userpage')
@@ -29,7 +29,7 @@ export default function ListingPage() {
           <>
             <div class="beginner_posters">
               {like.map((video) =>{
-                console.log(like,"this is like ")
+                // console.log(like,"this is like ")
                 return <ThumbnailImage video={video} />
               })}
             </div>

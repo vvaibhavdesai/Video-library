@@ -65,11 +65,8 @@ function App() {
     }
   }, []);
 
-  console.log(token, "meh aya useeffect");
   useEffect(() => {
-    console.log(token, "meh aya useeffectmeh");
     if (token) {
-      console.log(token, "meh aya if useeffectmeh");
       navigate("/");
     }
   }, [token]);

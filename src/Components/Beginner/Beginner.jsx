@@ -25,7 +25,7 @@ export default function Beginner() {
       <div className="beginner_heading">
         <h3>Beginner's</h3>{" "}
       </div>
-      <div class="beginner_posters">
+      <div className="beginner_posters">
         {videoData.length > 0 && videoData.slice(12, 17).map((video) => (
           <img
             className="beginner_poster"

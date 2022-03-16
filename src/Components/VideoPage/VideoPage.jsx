@@ -13,7 +13,6 @@ export default function VideoPage() {
   const { videoId } = useParams();
   const [showModal, setShowModal] = useState(false);
   const { videoData } = useVideoData();
-  console.log(videoId,"yeh hai videpage baba")
 
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -23,7 +22,6 @@ export default function VideoPage() {
   if(videoData.length > 0){
      video = videoData.find(({ _id }) => _id === videoId);
   }
-  console.log(videoData,video,"this is video")
   const {
     like,
     setLike,
